@@ -1,0 +1,13 @@
+<div class="row">
+	<div class="col-md-12">
+		{foreach $form->controls as $key => $control}
+			{if $control instanceof Nette\Forms\Controls\SubmitButton}			
+				{if $key=='submit'}
+					<input n:name="$control" class="btn btn-primary">
+				{else}
+					<input n:name="$control" class="btn btn-info">
+				{/if}
+			{/if}
+		{/foreach}
+	</div>
+</div>

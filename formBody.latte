@@ -1,0 +1,26 @@
+<fieldset n:foreach="$form->groups as $group" n:if="$group->controls && $group->getOption('visual')" n:block="#group">    
+    <legend n:if="strlen($group->options['label']) > 0">{$group->options['label']}</legend>
+	<p n:ifset="$group->options['description']">{$group->options['description']}</p>	
+	<div class="row">		
+		<div n:class="$group->controls[0] instanceof Nette\Forms\Controls\Checkbox ? col-md-12">
+			{foreach $group->controls as $input}
+				{* get_class($input) *} 			
+				<div n:if="$input instanceof Nette\Forms\Controls\Checkbox" class="{$input->required ? required}">				
+					<label n:if="$input->caption">
+						<input type="checkbox" n:name="$input">
+						{$input->caption}
+					</label>								
+					<span class=error n:ifcontent>{$input->error}</span>				
+				</div>						
+
+				<div n:if="$input instanceof Nette\Forms\Controls\TextInput" class="form-group {$controlClass} {$input->required ? required}">
+					<label n:if="$input->label" n:name="$input" class="control-label">{$input->caption}</label>
+					<input n:if="$input instanceof Nette\Forms\Controls\TextInput" n:name="$input" class="form-control">
+					<span class=error n:ifcontent>{$input->error}</span>
+				</div>
+			{/foreach}
+		</div>
+	</div>
+
+</fieldset>		
+
