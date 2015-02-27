@@ -1,4 +1,4 @@
-<fieldset n:foreach="$form->groups as $group" n:if="$group->controls && $group->getOption('visual')" n:block="#group">    
+<fieldset n:foreach="$form->groups as $group" n:if="$group->controls && $group->getOption('visual')" n:block="#group">
     <legend n:if="strlen($group->options['label']) > 0">{$group->options['label']}</legend>
 	<p n:ifset="$group->options['description']">{$group->options['description']}</p>	
 	<div class="row">		
