@@ -1,4 +1,4 @@
-martiman/bsforms
+Martiman/BSForms
 ======
 Form Component for Nette Framework with Twitter Bootstrap templates
 
