@@ -7,7 +7,7 @@ use Nette,
 	Nette\Utils\Html;
 use Tracy\Debugger;
 
-class BSForm1 extends UI\Control {
+class BSForm extends UI\Control {
 
 	public $templateName;
 	private $form;
