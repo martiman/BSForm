@@ -18,8 +18,6 @@
         "phpunit/phpunit": "*@stable"
     },
 	"autoload": {
-		"psr-0": {
-			"martiman\\bsforms\\": "src/"
-		}
-	}	
+        "classmap": ["src"]
+	}
 }
