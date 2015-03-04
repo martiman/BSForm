@@ -6,11 +6,11 @@
 			</h3>
 		</div>
 		<div class="panel-body">			
-			{include 'formErrors.latte', form => $form }					
-			{include 'formBody.latte', form => $form, class => $controlClass}
+			{include 'BSPartialFormErrors.latte', form => $form }
+			{include 'BSPartialFormBody.latte', form => $form, class => $controlClass}
 		</div>
 		<div class="panel-footer">
-			{include 'formButtons.latte', form => $form}		
+			{include 'BSPartialFormButtons.latte', form => $form}
 		</div>
 	</div>
 </form>
