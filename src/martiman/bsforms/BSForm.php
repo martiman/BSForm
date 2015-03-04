@@ -1,6 +1,6 @@
 <?php
 
-namespace martiman\bsforms;
+namespace Martiman\BSForms;
 
 use Nette,
     Nette\Application\UI,
