@@ -1,0 +1,16 @@
+<form n:name=$form class="form">	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+			{$formName}
+			</h3>
+		</div>
+		<div class="panel-body">			
+			{include 'BSPartialFormErrors.latte', form => $form }
+			{include 'BSPartialFormBody.latte', form => $form, class => $controlClass}
+		</div>
+		<div class="panel-footer">
+			{include 'BSPartialFormButtons.latte', form => $form}
+		</div>
+	</div>
+</form>
